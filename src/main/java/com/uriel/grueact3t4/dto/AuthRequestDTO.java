@@ -1,0 +1,18 @@
+
+package com.uriel.grueact3t4.dto;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
+public record AuthRequestDTO(
+
+    @NotBlank
+    @Email
+    String email,
+
+    @NotBlank
+    @Size(min = 8, max = 72)
+    String password
+
+) {}
